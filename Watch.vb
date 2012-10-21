@@ -37,7 +37,7 @@ Public Class ObjectWatch
             For Each element As String In instructions
 
                 If item IsNot Nothing Then
-                    item = TypeReflectionTesting(item, element)
+                    item = FindResults(item, element)
                 End If
 
             Next
@@ -56,7 +56,7 @@ Public Class ObjectWatch
 
         Catch ex As Exception
 
-            Return "Unable to perform the query!"
+            Return ex.Message
 
         End Try
 
@@ -159,7 +159,7 @@ Public Class ObjectWatch
 
 
 
-    Private Function TypeReflectionTesting(ByVal item As Object, ByVal command As String) As Object
+    Private Function FindResults(ByVal item As Object, ByVal command As String) As Object
 
         Dim q As Object = item
 
@@ -234,7 +234,7 @@ Public Class ObjectWatch
             End If
 
         ElseIf command.StartsWith("(") AndAlso command.EndsWith(")") Then
-            'Probably and indexer
+            'Probably an indexer
 
             Return IndexerPropertyEvaluator(command, q)
 
@@ -348,6 +348,9 @@ Public Class ObjectWatch
 
         Dim newString As String = command.Replace("(", "").Replace(")", "")
         Dim properties() As MemberInfo = obj.GetType.GetDefaultMembers
+        Debug.WriteLine(newString)
+        Debug.WriteLine(properties.First.ToString)
+
         Dim propInfo As PropertyInfo
         Dim indexParameters() As ParameterInfo
         Dim paramters() As String
@@ -383,7 +386,7 @@ Public Class ObjectWatch
                 Next
 
                 Dim value As Object = propInfo.GetValue(obj, paramCollection.ToArray)
-                Return value
+                Return Newtonsoft.Json.JsonConvert.SerializeObject(value)
 
             End If
 
