@@ -33,7 +33,7 @@
 
         Else
 
-            Throw New Exception("Where is not supported for the type.")
+            Throw New Exception("Select is not supported for the type.")
 
         End If
 

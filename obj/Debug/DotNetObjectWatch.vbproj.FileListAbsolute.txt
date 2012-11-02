@@ -9,3 +9,13 @@ C:\Users\NEW\Documents\Visual Studio 2010\Projects\ConsoleApplication1\DotNetObj
 C:\Users\NEW\Documents\Visual Studio 2010\Projects\ConsoleApplication1\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.dll
 C:\Users\NEW\Documents\Visual Studio 2010\Projects\ConsoleApplication1\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.xml
 C:\Users\NEW\Documents\Visual Studio 2010\Projects\ConsoleApplication1\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.pdb
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\bin\Debug\DotNetObjectWatch.dll
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\bin\Debug\DotNetObjectWatch.pdb
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\bin\Debug\DotNetObjectWatch.xml
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.Resources.resources
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.dll
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.xml
+C:\Users\Tony\Documents\GitHub\DotNetObjectWatch\obj\Debug\DotNetObjectWatch.pdb

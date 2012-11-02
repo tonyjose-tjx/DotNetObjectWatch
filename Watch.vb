@@ -135,11 +135,16 @@ Public Class ObjectWatch
 
             ElseIf item.StartsWith("(") AndAlso item.EndsWith(")") Then
 
-                If continousExecutionCalls.Last.EndsWith(")") Then
+                If continousExecutionCalls.Count > 0 AndAlso continousExecutionCalls.Last.EndsWith(")") Then
+
+                    continousExecutionCalls.Add(calls(i))
+
+                ElseIf continousExecutionCalls.Count = 0 Then
 
                     continousExecutionCalls.Add(calls(i))
 
                 Else
+
                     Dim lastElement = continousExecutionCalls.Last
                     continousExecutionCalls(continousExecutionCalls.Count - 1) = lastElement & calls(i)
 
@@ -324,7 +329,7 @@ Public Class ObjectWatch
 
             If type = GetType(System.String) Then
 
-                value = value.Substring(value.IndexOf(""""), value.LastIndexOf(""""))
+                value = value.Substring(value.IndexOf("""") + 1, value.LastIndexOf("""") - 1)
 
             End If
 
@@ -344,9 +349,10 @@ Public Class ObjectWatch
 
 
  
-    Private Function IndexerPropertyEvaluator(ByVal command As String, ByVal obj As Object) As String
+    Private Function IndexerPropertyEvaluator(ByVal command As String, ByVal obj As Object) As Object
 
         Dim newString As String = command.Replace("(", "").Replace(")", "")
+
         Dim properties() As MemberInfo = obj.GetType.GetDefaultMembers
         Debug.WriteLine(newString)
         Debug.WriteLine(properties.First.ToString)
@@ -374,7 +380,7 @@ Public Class ObjectWatch
 
                     If type = GetType(System.String) Then
 
-                        paramValue = paramValue.Substring(paramValue.IndexOf(""""), paramValue.LastIndexOf(""""))
+                        paramValue = paramValue.Substring(paramValue.IndexOf("""") + 1, paramValue.LastIndexOf("""") - 1)
 
                     End If
 
@@ -386,12 +392,16 @@ Public Class ObjectWatch
                 Next
 
                 Dim value As Object = propInfo.GetValue(obj, paramCollection.ToArray)
-                Return Newtonsoft.Json.JsonConvert.SerializeObject(value)
+                Return value
+
+            Else
+
+                Return Nothing
 
             End If
 
         Next
-        Return String.Empty
+        Return Nothing
     End Function
 
 

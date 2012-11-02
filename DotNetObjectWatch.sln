@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DotNetObjectWatch", "DotNetObjectWatch.vbproj", "{1530BC7D-5874-467D-A114-F515BB0822E8}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ObjectWatchWebsite", "..\..\Visual Studio 2010\WebSites\ObjectWatchWebsite", "{4B53211C-6FB9-4156-8B7E-BA0B7B89076F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{1530BC7D-5874-467D-A114-F515BB0822E8}|DotNetObjectWatch.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/ObjectWatchWebsite"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\Visual Studio 2010\WebSites\ObjectWatchWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ObjectWatchWebsite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ObjectWatchWebsite"
+		Release.AspNetCompiler.PhysicalPath = "..\..\Visual Studio 2010\WebSites\ObjectWatchWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ObjectWatchWebsite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51994"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1530BC7D-5874-467D-A114-F515BB0822E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1530BC7D-5874-467D-A114-F515BB0822E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1530BC7D-5874-467D-A114-F515BB0822E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1530BC7D-5874-467D-A114-F515BB0822E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B53211C-6FB9-4156-8B7E-BA0B7B89076F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B53211C-6FB9-4156-8B7E-BA0B7B89076F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B53211C-6FB9-4156-8B7E-BA0B7B89076F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B53211C-6FB9-4156-8B7E-BA0B7B89076F}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
